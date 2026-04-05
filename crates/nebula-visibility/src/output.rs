@@ -15,7 +15,7 @@ pub struct CellIndex { pub x: i32, pub y: i32, pub z: i32 }
 /// is stored as a flat `Vec<u64>` in row-major (x-fastest) grid order.
 ///
 /// To test visibility from cell A (flat index `a`) to cell B (flat index `b`):
-/// ```rust
+/// ```rust,ignore
 /// let word = a * words_per_cell + b / 64;
 /// let bit  = b % 64;
 /// let visible = (pvs.bits[word] >> bit) & 1 == 1;
