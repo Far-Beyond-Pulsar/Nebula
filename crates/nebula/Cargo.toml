@@ -17,6 +17,9 @@ nebula-audio      = { path = "../nebula-audio",       optional = true }
 nebula-visibility = { path = "../nebula-visibility",  optional = true }
 nebula-nav        = { path = "../nebula-nav",         optional = true }
 
+[dev-dependencies]
+pollster = { workspace = true }
+
 [features]
 default     = ["light", "ao", "probe", "audio", "visibility", "nav"]
 light       = ["dep:nebula-light"]

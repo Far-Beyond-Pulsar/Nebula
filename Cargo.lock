@@ -496,6 +496,7 @@ dependencies = [
  "nebula-probe",
  "nebula-serialize",
  "nebula-visibility",
+ "pollster",
 ]
 
 [[package]]
@@ -509,6 +510,7 @@ dependencies = [
  "nebula-core",
  "nebula-gpu",
  "nebula-serialize",
+ "pollster",
  "serde",
  "serde_json",
  "thiserror 1.0.69",
@@ -527,6 +529,7 @@ dependencies = [
  "nebula-core",
  "nebula-gpu",
  "nebula-serialize",
+ "pollster",
  "rayon",
  "serde",
  "serde_json",
@@ -558,6 +561,7 @@ dependencies = [
  "glam",
  "log",
  "nebula-core",
+ "pollster",
  "thiserror 1.0.69",
  "wgpu",
 ]
@@ -573,6 +577,7 @@ dependencies = [
  "nebula-core",
  "nebula-gpu",
  "nebula-serialize",
+ "pollster",
  "rayon",
  "serde",
  "serde_json",
@@ -593,6 +598,7 @@ dependencies = [
  "nebula-core",
  "nebula-gpu",
  "nebula-serialize",
+ "pollster",
  "rayon",
  "serde",
  "serde_json",
@@ -612,6 +618,7 @@ dependencies = [
  "nebula-core",
  "nebula-gpu",
  "nebula-serialize",
+ "pollster",
  "serde",
  "serde_json",
  "thiserror 1.0.69",
@@ -644,6 +651,7 @@ dependencies = [
  "nebula-core",
  "nebula-gpu",
  "nebula-serialize",
+ "pollster",
  "rayon",
  "serde",
  "serde_json",

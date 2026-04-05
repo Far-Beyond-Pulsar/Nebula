@@ -2,6 +2,7 @@ pub mod baker;
 pub mod config;
 pub mod output;
 
+pub use baker::NavBaker;
 pub use config::NavConfig;
 pub use output::{NavOutput, NavPolygon, NavVertex, CHUNK_TAG};
 

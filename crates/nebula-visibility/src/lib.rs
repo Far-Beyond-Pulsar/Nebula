@@ -2,6 +2,7 @@ pub mod baker;
 pub mod config;
 pub mod output;
 
+pub use baker::PvsBaker;
 pub use config::PvsConfig;
 pub use output::{PvsOutput, CHUNK_TAG};
 

@@ -14,3 +14,9 @@ bytemuck     = { workspace = true }
 glam         = { workspace = true }
 thiserror    = { workspace = true }
 log          = { workspace = true }
+
+[dev-dependencies]
+nebula-core = { workspace = true }
+pollster    = { workspace = true }
+bytemuck    = { workspace = true }
+wgpu        = { workspace = true }
