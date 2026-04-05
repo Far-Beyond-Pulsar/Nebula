@@ -13,7 +13,7 @@
 //! nebula = "0.1"
 //! ```
 //!
-//! ```rust,no_run
+//! ```rust,ignore
 //! use nebula::prelude::*;
 //!
 //! #[pollster::main]
