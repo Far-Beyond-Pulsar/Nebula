@@ -20,7 +20,7 @@ struct Material { absorption: array<f32,8>, scattering: array<f32,8> }
 @group(0) @binding(5) var<storage, read_write> rir: array<atomic<i32>>; // Q8.23 fixed-point floats
 
 var<private> rng: u32;
-fn pcg() -> u32 { rng=rng*747796405u+2891336453u; let w=(((rng>>(rng>>28u+4u))^rng)*277803737u); return (w>>22u)^w; }
+fn pcg() -> u32 { rng=rng*747796405u+2891336453u; let w=(((rng>>((rng>>28u)+4u))^rng)*277803737u); return (w>>22u)^w; }
 fn rf() -> f32 { return f32(pcg())*(1.0/4294967296.0); }
 fn uniform_sphere() -> vec3<f32> {
     let u1=rf();let u2=rf();

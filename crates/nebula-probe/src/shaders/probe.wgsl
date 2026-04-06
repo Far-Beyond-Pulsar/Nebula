@@ -9,7 +9,7 @@ struct Mesh   { idx_off: u32, idx_cnt: u32, vert_off: u32, _p: u32, xform: mat4x
 @group(0) @binding(4) var                 out_tex: texture_storage_2d<rgba32float, write>;
 
 var<private> rng: u32;
-fn pcg() -> u32 { rng=rng*747796405u+2891336453u; let w=(((rng>>(rng>>28u+4u))^rng)*277803737u); return (w>>22u)^w; }
+fn pcg() -> u32 { rng=rng*747796405u+2891336453u; let w=(((rng>>((rng>>28u)+4u))^rng)*277803737u); return (w>>22u)^w; }
 fn rf() -> f32 { return f32(pcg())*(1.0/4294967296.0); }
 
 fn hemisphere(n:vec3<f32>)->vec3<f32>{

@@ -16,7 +16,7 @@ struct Mesh   { idx_off: u32, idx_cnt: u32, vert_off: u32, _p: u32, xform: mat4x
 @group(0) @binding(4) var<storage, read_write> pvs_bits: array<atomic<u32>>;
 
 var<private> rng: u32;
-fn pcg() -> u32 { rng=rng*747796405u+2891336453u; let w=(((rng>>(rng>>28u+4u))^rng)*277803737u); return (w>>22u)^w; }
+fn pcg() -> u32 { rng=rng*747796405u+2891336453u; let w=(((rng>>((rng>>28u)+4u))^rng)*277803737u); return (w>>22u)^w; }
 fn rf() -> f32 { return f32(pcg())*(1.0/4294967296.0); }
 
 fn uniform_sphere() -> vec3<f32> {
