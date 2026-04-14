@@ -24,7 +24,7 @@ In a game, the player moves through many different acoustic spaces: a small tile
 
 In a DAW you have the luxury of picking one reverb preset per track. In a game the "room" changes continuously as the player walks around.
 
-The naive solution — simulate the room acoustics in real time from first principles — is computationally prohibited:
+The naive solution — simulate the room acoustics in real time from first principles — is computationally prohibitive:
 
 - **Ray tracing is expensive.** Getting a convincing reverb tail requires thousands of acoustic ray paths per listener position. Even on a modern GPU this is a dedicated full-frame workload.
 - **Convolution reverb is expensive.** Convolving an audio stream with a 2-second IR (88 200 samples at 44.1 kHz) using overlap-add FFT costs roughly 5–15 ms of CPU time per sound source, per frame. A scene with 20 sound sources would immediately exceed the entire audio thread budget.
